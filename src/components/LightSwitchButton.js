@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function LightSwitchButton(){
-  let [light, setLight] = useState(0);
+  let [light, setLight] = useState(1);
   console.log(`light:`,light)
   if (light !== 1) {
     return (
