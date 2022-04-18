@@ -9,7 +9,6 @@ import { useState } from "react";
 function App() {
   let [light, setLight] = useState("off");
   const dark = (light === 'off') ? 'dark' : '';
-  console.log(dark)
   return (
     <div className={`App ${dark}`}>
       <h1>Fancy Buttons!</h1>
