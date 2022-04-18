@@ -3,7 +3,7 @@ import { useState } from "react";
 function AngryButton(){
   let [anger, setAnger] = useState(0);
   if (anger > 1.1) {
-    anger = 0;
+    setAnger(0);
   } 
   console.log(anger)
   return (
