@@ -9,13 +9,14 @@ import { useState } from "react";
 function App() {
   let [light, setLight] = useState("off");
   const dark = (light === 'off') ? 'dark' : '';
+  const switchLight = () => setLight(light === "on" ? "off" : "on");
   return (
     <div className={`App ${dark}`}>
       <h1>Fancy Buttons!</h1>
       <section>
         <AngryButton />
         <CounterButton />
-        <LightSwitchButton light={light} setLight={setLight} />
+        <LightSwitchButton light={light} switchLight={switchLight} />
         <TextRepeaterButton />
       </section>
     </div>
