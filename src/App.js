@@ -3,16 +3,20 @@ import AngryButton from "./components/AngryButton";
 import CounterButton from "./components/CounterButton";
 import LightSwitchButton from "./components/LightSwitchButton";
 import TextRepeaterButton from "./components/TextRepeaterButton";
+import { useState } from "react";
 
 
 function App() {
+  let [light, setLight] = useState("off");
+  const dark = (light === 'off') ? 'dark' : '';
+  console.log(dark)
   return (
-    <div className={`App`}>
+    <div className={`App ${dark}`}>
       <h1>Fancy Buttons!</h1>
       <section>
         <AngryButton />
         <CounterButton />
-        <LightSwitchButton />
+        <LightSwitchButton light={light} setLight={setLight} />
         <TextRepeaterButton />
       </section>
     </div>
